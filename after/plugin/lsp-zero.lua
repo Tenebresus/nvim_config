@@ -1,0 +1,5 @@
+require('lsp-zero')
+require('lspconfig').intelephense.setup({})
+require('lspconfig').gopls.setup({})
+require('lspconfig').clangd.setup({})
+require('lspconfig').gdscript.setup({})
