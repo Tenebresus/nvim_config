@@ -22,6 +22,19 @@ return require('packer').startup(function(use)
 
   use "scottmckendry/cyberdream.nvim"
 
+  use {
+    'folke/lazydev.nvim',
+    config = function()
+      -- Put your lazy.nvim configuration here
+      library = {
+        -- See the configuration section for more details
+        -- Load luvit types when the `vim.uv` word is found
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+      }
+    end
+  }
+
+
   use "catppuccin/nvim"
 
 --  use ({ "catppuccin/nvim", 
